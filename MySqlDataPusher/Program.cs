@@ -10,7 +10,7 @@ namespace MySqlDataPusher
     {
         static void Main(string[] args)
         {
-            using (MySqlConnection mySqlConnection = new MySqlConnection("server=172.18.0.2;Port=3306;Protocol=TCP;database=onlyoffice;User Id=onlyoffice_user;password=onlyoffice_pass;"))
+            using (MySqlConnection mySqlConnection = new MySqlConnection("server=172.19.0.2;Port=3306;Protocol=TCP;database=onlyoffice;User Id=onlyoffice_user;password=onlyoffice_pass;"))
             {
                 var hasher = new Hasher();
 
@@ -29,7 +29,7 @@ namespace MySqlDataPusher
                     {
                         var user = Guid.NewGuid().ToString();
 
-                        coreUserRows.Add($"(1, '{user}', 'TestUser{index}', 'Test', 'testuser{index}@onlyoffice.com', 'User', NOW())");
+                        coreUserRows.Add($"(1, '{user}', 'TestUser{index}', 'Test', 'User', 'testuser{index}@onlyoffice.com', NOW())");
                         coreUserSecurityRows.Add($"(1, '{user}', '{hasher.ComputeHash(user)}')");
                         index++;
                     }
