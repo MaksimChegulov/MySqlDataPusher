@@ -7,7 +7,7 @@ namespace MySqlDataPusher
     public class Hasher
     {
         private const string MACHINE_KEY = "your_core_machinekey";
-        private const string PASSWORD_HASH = "fde9949f7b36de982464e77129945a6635885b7fba8725f02245577a579ff948";
+        private const string PASSWORD_HASH = "6fa58141339cd91c3e37619a08f4d6e97862e0263c89b200d68c8bdc2d1e87dd";
 
         public string ComputeHash(string userId)
         {
